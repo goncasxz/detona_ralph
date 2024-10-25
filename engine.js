@@ -20,11 +20,10 @@ const state = {
 function countDown() {
     state.values.currentTime --;
     state.view.timeLeft.textContent = state.values.currentTime;
-    
 
     if (state.values.currentTime <=0){
-        clearInterval(state.actions.countDownTimerId);
-        clearInterval(state.actions.TimerId)
+        clearInterval(state.action.countDownTimerId);
+        clearInterval(state.action.TimerId);
         alert("Game Over! O seu resultado foi: " + state.values.result);
     }
 }
@@ -66,6 +65,7 @@ function addListenerHitBox() {
 function main() {
     // moveEnemy();
     addListenerHitBox();
+    
 
 };
 
